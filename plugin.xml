@@ -87,9 +87,16 @@
     <source-file src="src/ios/PushPlugin.m"/>
     <header-file src="src/ios/AppDelegate+notification.h"/>
     <header-file src="src/ios/PushPlugin.h"/>
-    <framework src="Firebase/Core" type="podspec" spec="$IOS_FIREBASE_MESSAGING_VERSION"/>
-    <framework src="Firebase/Messaging" type="podspec" spec="$IOS_FIREBASE_MESSAGING_VERSION"/>
+    
     <framework src="PushKit.framework"/>
+    podspec>
+      <config>
+        <source url="https://cdn.cocoapods.org/"/>
+      </config>
+      <pods use-frameworks="true">
+        <pod name="Firebase/Messaging" spec="$IOS_FIREBASE_MESSAGING_VERSION" />
+      </pods>
+    </podspec>
   </platform>
   <platform name="windows">
     <hook type="after_plugin_install" src="hooks/windows/setToastCapable.js"/>
