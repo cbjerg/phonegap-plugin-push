@@ -66,6 +66,7 @@
     <hook type="after_prepare" src="hooks/browser/updateManifest.js"/>
   </platform>
   <platform name="ios">
+    <preference name="IOS_FIREBASE_MESSAGING_VERSION" default="~> 6.32.2"/>
     <config-file target="config.xml" parent="/*">
       <feature name="PushNotification">
         <param name="ios-package" value="PushPlugin"/>
@@ -86,7 +87,7 @@
     <source-file src="src/ios/PushPlugin.m"/>
     <header-file src="src/ios/AppDelegate+notification.h"/>
     <header-file src="src/ios/PushPlugin.h"/>
-    <framework src="FirebaseMessaging" type="podspec" spec="~> 4.6.2"/>
+    <framework src="FirebaseMessaging" type="podspec" spec="$IOS_FIREBASE_MESSAGING_VERSION"/>
     <framework src="PushKit.framework"/>
   </platform>
   <platform name="windows">
