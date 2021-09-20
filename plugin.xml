@@ -89,7 +89,7 @@
     <header-file src="src/ios/PushPlugin.h"/>
     
     <framework src="PushKit.framework"/>
-    podspec>
+    <podspec>
       <config>
         <source url="https://cdn.cocoapods.org/"/>
       </config>
